@@ -1,0 +1,41 @@
+#=====================ACCOUNTS==================
+
+# API CALL FOR CREATE USER
+
+###
+POST http://127.0.0.1:8000/accounts/register/
+Content-Type: application/json
+
+{
+    "username":"abhishek",
+    "email":"abhishek@gmail.com",
+    "password":"abhishek@123",
+    "phone":"8765894589",
+    "dob":"2005-12-07"
+}
+
+
+#==============TRANSACTIONS====================
+
+# API CALL FOR LIST ALL EXPENSES
+
+###
+GET http://127.0.0.1:8000/expenses/
+Accept: application/json
+Authorization: Basic abhishek:abhishek@123
+
+
+
+# API CALL FOR ADD EXPENSES
+
+###
+POST  http://127.0.0.1:8000/expenses/
+Content-Type: application/json
+Authorization: Basic abhishek:abhishek@123
+
+{
+    "title":"Biriyani",
+    "amount":250
+}
+
+
