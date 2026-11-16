@@ -7,10 +7,10 @@ POST http://127.0.0.1:8000/accounts/register/
 Content-Type: application/json
 
 {
-    "username":"abhishek",
-    "email":"abhishek@gmail.com",
-    "password":"abhishek@123",
-    "phone":"8765894589",
+    "username":"abinandha",
+    "email":"abinandha@gmail.com",
+    "password":"password@123",
+    "phone":"8765768978",
     "dob":"2005-12-07"
 }
 
@@ -34,8 +34,52 @@ Content-Type: application/json
 Authorization: Basic abhishek:abhishek@123
 
 {
-    "title":"Biriyani",
-    "amount":250
+    "title":"fuel car",
+    "amount":1000,
+    "category":"fuel"
 }
 
 
+# API CALL FORFETCHING EXPENSE DETAIL   
+
+###
+GET http://127.0.0.1:8000/expenses/1/
+Accept: application/json
+Authorization: Basic abinandha:password@123
+
+# API CALL FOR UPDATE
+
+###
+PUT http://127.0.0.1:8000/expenses/1/
+Content-Type: application/json
+Authorization: Basic abhishek:abhishek@123
+
+
+{
+  "id": 1,
+  "title": "dosa",
+  "category": "food",
+  "amount": "250.00",
+  "description": null,
+  "payment_method": "upi",
+  "bill_image": null,
+  "created_at": "2026-11-12T04:54:19.572403Z",
+  "owner": 1
+}
+
+
+# API CALL FOR DELETE
+
+###
+DELETE  http://127.0.0.1:8000/expenses/2/
+Accept: application/json
+Authorization: Basic abhishek:abhishek@123
+
+
+
+# API CALL FOR EXPENSE SUMMARY
+
+###
+GET http://127.0.0.1:8000/expense/summary/
+Accept: application/json
+Authorization: Basic abhishek:abhishek@123
