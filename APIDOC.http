@@ -14,6 +14,16 @@ Content-Type: application/json
     "dob":"2005-12-07"
 }
 
+#token
+
+###
+POST http://127.0.0.1:8000/token/
+Content-Type: application/json
+
+{
+    "username":"abhishek",
+    "password":"abhishek@123"
+}
 
 #==============TRANSACTIONS====================
 
@@ -22,7 +32,7 @@ Content-Type: application/json
 ###
 GET http://127.0.0.1:8000/expenses/
 Accept: application/json
-Authorization: Basic abhishek:abhishek@123
+Authorization: Token c02e7999d2e1f4687c82c4d038329d755e9d21dc
 
 
 
@@ -31,12 +41,12 @@ Authorization: Basic abhishek:abhishek@123
 ###
 POST  http://127.0.0.1:8000/expenses/
 Content-Type: application/json
-Authorization: Basic abhishek:abhishek@123
+Authorization: Token c02e7999d2e1f4687c82c4d038329d755e9d21dc
 
 {
-    "title":"fuel car",
-    "amount":1000,
-    "category":"fuel"
+    "title":"hospital",
+    "amount":2500,
+    "category":"health"
 }
 
 
@@ -45,14 +55,14 @@ Authorization: Basic abhishek:abhishek@123
 ###
 GET http://127.0.0.1:8000/expenses/1/
 Accept: application/json
-Authorization: Basic abinandha:password@123
+Authorization: Token c02e7999d2e1f4687c82c4d038329d755e9d21dc
 
 # API CALL FOR UPDATE
 
 ###
 PUT http://127.0.0.1:8000/expenses/1/
 Content-Type: application/json
-Authorization: Basic abhishek:abhishek@123
+Authorization: Token c02e7999d2e1f4687c82c4d038329d755e9d21dc
 
 
 {
@@ -73,7 +83,7 @@ Authorization: Basic abhishek:abhishek@123
 ###
 DELETE  http://127.0.0.1:8000/expenses/2/
 Accept: application/json
-Authorization: Basic abhishek:abhishek@123
+Authorization: Token c02e7999d2e1f4687c82c4d038329d755e9d21dc
 
 
 
@@ -82,4 +92,4 @@ Authorization: Basic abhishek:abhishek@123
 ###
 GET http://127.0.0.1:8000/expense/summary/
 Accept: application/json
-Authorization: Basic abhishek:abhishek@123
+Authorization: Token c02e7999d2e1f4687c82c4d038329d755e9d21dc
