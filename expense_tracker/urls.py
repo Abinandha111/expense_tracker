@@ -22,6 +22,7 @@ from accounts.views import SignUpView
 from transactions.views import ExpenseListCreateView
 from transactions.views import ExpenseRetrieveUpdateDeleteView
 from transactions.views import ExpenseSummaryView
+from transactions.views import BillScanView
 
 from rest_framework.authtoken.views import ObtainAuthToken
 urlpatterns = [
@@ -34,6 +35,7 @@ urlpatterns = [
     path('expenses/',ExpenseListCreateView.as_view()),
     path('expenses/<int:pk>/',ExpenseRetrieveUpdateDeleteView.as_view()),
     path('expense/summary/',ExpenseSummaryView.as_view()),
+    path('bill/scan/',BillScanView.as_view()),
 
     #token
     path('token/',ObtainAuthToken.as_view()),

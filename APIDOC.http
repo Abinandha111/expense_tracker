@@ -44,9 +44,9 @@ Content-Type: application/json
 Authorization: Token c02e7999d2e1f4687c82c4d038329d755e9d21dc
 
 {
-    "title":"hospital",
-    "amount":2500,
-    "category":"health"
+    "title":"To Temple",
+    "amount":200,
+    "category":"travel"
 }
 
 
@@ -93,3 +93,6 @@ Authorization: Token c02e7999d2e1f4687c82c4d038329d755e9d21dc
 GET http://127.0.0.1:8000/expense/summary/
 Accept: application/json
 Authorization: Token c02e7999d2e1f4687c82c4d038329d755e9d21dc
+
+
+
